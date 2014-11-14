@@ -111,7 +111,7 @@ if($logged_in && !$error)
 	
 	while (($row = oci_fetch_array($stid, OCI_BOTH)) != false) { //Loop through all rows returned.
 		$user = $row["USER_NAME"];
-		echo "$user <A HREF='addgroupmembers2.php?action=delete&user=$row'>[delete]</A><br>";
+		echo "$user <A HREF='addgroupmembers2.php?action=delete&user=$user'>[delete]</A><br>";
 	}
 	oci_free_statement($stid);
 	oci_close($conn);
